@@ -1,3 +1,4 @@
+const fs = require('fs');
 const path = require('path');
 const webpack = require('webpack');
 
@@ -5,6 +6,9 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 const argv = require('minimist')(process.argv.slice(2));
 const root = path.resolve(__dirname, '..', '..');
+
+const configFile = fs.readFileSync(path.resolve(root, '_config.yml'), 'utf8');
+const config = require('js-yaml').safeLoad(configFile);
 
 module.exports = {
   context: path.resolve(__dirname, '..'),
@@ -25,6 +29,7 @@ module.exports = {
   },
   devServer: {
     contentBase: path.join(root, "_site"),
+    publicPath: `${config.baseurl || ''}/assets`,
     watchContentBase: true,
   },
   resolve: {
