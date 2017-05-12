@@ -1,0 +1,25 @@
+dist: trusty
+language: ruby
+sudo: false
+
+rvm:
+  - 2.4.1
+
+env:
+  - TRAVIS_NODE_VERSION="7"
+
+cache:
+  yarn: true
+  directories:
+    - node_modules
+
+before_script:
+  - cd _assets
+  - yarn install
+  - cd ../
+
+script:
+  - cd _assets
+  - yarn build
+  - cd ../
+  - bundle exec jekyll build
