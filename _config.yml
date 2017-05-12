@@ -1,0 +1,18 @@
+title: Jekyll Webpack Starter Kit
+url: "http://jekyll-webpack.github.io"
+baseurl: "/"
+description: >
+  Hopefully, an enjoyable, modern,
+  static site generator starter kit.
+
+# Build settings
+markdown: kramdown
+gems:
+  - jekyll-feed
+
+exclude:
+  - _assets
+  - docker-compose.yml
+  - Gemfile
+  - Gemfile.lock
+  - README.md

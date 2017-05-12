@@ -1,0 +1,30 @@
+version: '2'
+
+services:
+  node:
+    container_name: jekyll.node
+    build:
+      context: .
+      dockerfile: ./.docker/node/Dockerfile
+    environment:
+      - DOCKER=true
+      - NODE_ENV=development
+    ports:
+      - 3000:3000
+    volumes:
+      - .:/code
+      - node_modules:/code/_assets/node_modules
+
+  ruby:
+    container_name: jekyll.ruby
+    build:
+      context: .
+      dockerfile: ./.docker/ruby/Dockerfile
+    environment:
+      - DOCKER=true
+      - JEKYLL_ENV=development
+    volumes:
+      - .:/code
+
+volumes:
+  node_modules:
