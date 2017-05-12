@@ -25,11 +25,10 @@ module.exports = {
   output: {
     filename: '[name].js',
     path: path.resolve(root, 'assets'),
-    publicPath: '/assets'
+    publicPath: `${config.baseurl || ''}/assets`
   },
   devServer: {
     contentBase: path.join(root, "_site"),
-    publicPath: `${config.baseurl || ''}/assets`,
     watchContentBase: true,
   },
   resolve: {
