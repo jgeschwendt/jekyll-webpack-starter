@@ -12,6 +12,7 @@ gems:
 
 exclude:
   - _assets
+  - vendor
   - docker-compose.yml
   - Gemfile
   - Gemfile.lock
