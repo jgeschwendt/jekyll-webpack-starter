@@ -25,7 +25,7 @@ module.exports = {
   output: {
     filename: '[name].js',
     path: path.resolve(root, 'assets'),
-    publicPath: `${config.baseurl || ''}/assets`
+    publicPath: `/assets`
   },
   devServer: {
     contentBase: path.join(root, "_site"),

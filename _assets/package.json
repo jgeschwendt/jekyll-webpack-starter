@@ -8,7 +8,8 @@
     "start": "webpack-dev-server --config webpack/webpack.config.js --hot --inline --host 0.0.0.0 --port 3000"
   },
   "dependencies": {
-    "bootstrap": "4.0.0-alpha.6"
+    "bootstrap": "4.0.0-alpha.6",
+    "jquery": "^3.2.1"
   },
   "devDependencies": {
     "babel-core": "^6.24.1",

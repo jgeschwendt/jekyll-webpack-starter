@@ -13,7 +13,6 @@ services:
       - 3000:3000
     volumes:
       - .:/code
-      - node_modules:/code/_assets/node_modules
 
   ruby:
     container_name: jekyll.ruby
