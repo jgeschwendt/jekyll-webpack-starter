@@ -1,0 +1,9 @@
+// overrides for core bootstrap classes
+
+.btn {
+  text-transform: uppercase;
+
+  .btn-crazy-custom {
+    @include button-varient(#333, #ddd)
+  }
+}

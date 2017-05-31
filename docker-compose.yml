@@ -11,6 +11,8 @@ services:
       - NODE_ENV=development
     ports:
       - 3000:3000
+      - 3001:3001
+      - 4000:4000
     volumes:
       - .:/code
 

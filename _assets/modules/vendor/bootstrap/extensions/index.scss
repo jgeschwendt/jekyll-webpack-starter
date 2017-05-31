@@ -1,0 +1,9 @@
+// extensions of bootstrap classes
+
+.button {
+  @extend .btn;
+}
+
+.button-group {
+  @extend .btn-group;
+}

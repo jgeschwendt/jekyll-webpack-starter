@@ -9,8 +9,16 @@
     <link rel="stylesheet" href="{{ "/assets/vendor.css" | relative_url }}">
     <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url  }}">
   {% endif %}
+  <style>
+    html {
+      background-color: #eee;
+    }
+    .fouc-buster {
+      display: none;
+    }
+  </style>
 </head>
-<body>
+<body class="fouc-buster">
   {{ content }}
   <script src="{{ "/assets/vendor.js" | relative_url }}" type="text/javascript"></script>
   <script src="{{ "/assets/main.js" | relative_url }}" type="text/javascript"></script>

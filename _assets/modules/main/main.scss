@@ -1,3 +1,9 @@
 body {
-  background-color: #eee;
+  // inherit the bgc of the html node set in head.html
+  background-color: inherit;
+}
+
+// remove the flash of unstyled content in the onload (HMR)
+.fouc-buster {
+  display: inherit;
 }
