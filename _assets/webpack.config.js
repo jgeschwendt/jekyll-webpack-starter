@@ -55,7 +55,7 @@ module.exports = {
             { loader: 'resolve-url-loader' },
             { loader: 'sass-loader',
               options: {
-                data: `$env: ${!argv.hot ? 'production' : 'development'};`,
+                data: `$env: ${argv.hot ? 'development' : 'production'};`,
                 precision: 10,
               },
             },
