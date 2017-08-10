@@ -6,9 +6,9 @@
   </a>
 </p>
 
-Starter Kit for Jekyll projects
+A Modern Jekyll Starter Kit, focused on maximizing DX, to build fast, quality, static sites.
 
-This project will remain in pre-alpha until Bootstrap 4 is officially released.
+This project will be rapidly changing, I will try to cut the first version when Bootstrap v4 is released.
 
 ```shell
 # put this in your bash config

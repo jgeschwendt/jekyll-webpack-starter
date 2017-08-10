@@ -1,9 +1,9 @@
 body {
-  // inherit the bgc of the html node set in head.html
-  background-color: inherit;
+  background-color: inherit; // inherit the bgc of the html node set in head.html
+  display: flex;
 }
 
-// remove the flash of unstyled content in the onload (HMR)
+// remove the flash of unstyled content from js styles
 .fouc-buster {
-  display: inherit;
+  display: inherit !important;
 }
