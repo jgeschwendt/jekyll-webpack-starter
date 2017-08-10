@@ -3,7 +3,7 @@ export default class Main {
     this.create();
   }
 
-  hotReload(...args) {
+  performHotReload(...args) {
     console.log('[Class::Main] hot reload...', ...args);
     this.destroy();
     this.create();

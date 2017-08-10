@@ -8,8 +8,14 @@ const OfflinePlugin = require('offline-plugin');
 const argv = require('minimist')(process.argv.slice(2));
 const root = path.resolve(__dirname, '..', '..', '..');
 
+if (argv.p) { // hack util i come up with something that works well with docker
+  process.env.NODE_ENV = 'production';
+}
+
 const configFile = fs.readFileSync(path.resolve(root, '_config.yml'), 'utf8');
 const config = require('js-yaml').safeLoad(configFile);
+
+const env = require('./addons/process.env');
 
 const WEBPACK_CONFIG = {
   context: path.resolve(root, '_assets'),
@@ -78,6 +84,11 @@ const WEBPACK_CONFIG = {
   },
   plugins: [
     new webpack.optimize.CommonsChunkPlugin({ name: 'vendor' }),
+    new webpack.DefinePlugin(Object.keys(env).reduce((obj, key) => {
+      console.log(`ADDING: process.env.${key}: ${JSON.stringify(env[key])}`)
+      obj[`process.env.${key}`] = JSON.stringify(env[key]);
+      return obj;
+    }, {})),
     new webpack.NamedModulesPlugin(),
     new webpack.ProvidePlugin({
       $: 'jquery',
