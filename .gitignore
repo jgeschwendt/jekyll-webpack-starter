@@ -1,3 +1,4 @@
+_assets/.cache-loader
 _site
 .sass-cache
 .jekyll-metadata

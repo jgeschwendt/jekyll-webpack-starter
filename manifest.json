@@ -1,0 +1,11 @@
+{
+  "name": "Jekyll Webpack Starter",
+  "short_name": "Jekyll Webpack Starter",
+  "start_url": "index.html?launcher=false",
+  "theme_color": "#ffffff",
+  "background_color": "#000000",
+  "orientation": "portrait",
+  "display": "browser",
+  "icons": [
+  ]
+}
