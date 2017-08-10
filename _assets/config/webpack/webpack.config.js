@@ -3,6 +3,7 @@ const path = require('path');
 const webpack = require('webpack');
 
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const OfflinePlugin = require('offline-plugin');
 
 const argv = require('minimist')(process.argv.slice(2));
 const root = path.resolve(__dirname, '..', '..', '..');
