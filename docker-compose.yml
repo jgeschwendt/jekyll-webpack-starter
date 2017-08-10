@@ -1,14 +1,14 @@
-version: '2'
+version: '3'
 
 services:
   node:
-    container_name: jekyll.node
     build:
       context: .
       dockerfile: ./.docker/node/Dockerfile
+    command: yarn start
+    container_name: jekyll.node
     environment:
       - DOCKER=true
-      - NODE_ENV=development
     ports:
       - 3000:3000
       - 3001:3001
@@ -17,15 +17,12 @@ services:
       - .:/code
 
   ruby:
-    container_name: jekyll.ruby
     build:
       context: .
       dockerfile: ./.docker/ruby/Dockerfile
+    command: bundle exec jekyll build --watch
+    container_name: jekyll.ruby
     environment:
       - DOCKER=true
-      - JEKYLL_ENV=development
     volumes:
       - .:/code
-
-volumes:
-  node_modules:

@@ -13,4 +13,3 @@ RUN cd /code && \
 COPY . /code
 
 WORKDIR /code
-ENTRYPOINT bundle exec jekyll build --watch

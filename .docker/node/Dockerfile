@@ -14,4 +14,3 @@ EXPOSE 3001
 EXPOSE 4000
 
 WORKDIR /code/_assets
-ENTRYPOINT yarn start
