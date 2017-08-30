@@ -1,8 +1,8 @@
 # jekyll-webpack-starter
 
 <p align="left">
-  <a href="https://travis-ci.org/geschwendt/jekyll-webpack-starter">
-    <img alt="Travis Status" src="https://travis-ci.org/geschwendt/jekyll-webpack-starter.svg?branch=master">
+  <a href="https://travis-ci.org/jgeschwendt/jekyll-webpack-starter">
+    <img alt="Travis Status" src="https://travis-ci.org/jgeschwendt/jekyll-webpack-starter.svg?branch=master">
   </a>
 </p>
 
